@@ -27,12 +27,19 @@
 <body>
   <main>
     <h1>PlayPlan</h1>
-    <p class="lead">Playdates made simple</p>
-    <div class="card"><p>Invite children from families you're connected with, pick a time and place, and see who's coming.</p></div>
-    <div class="card"><p>No pressure: answer "Yes" or "Sorry, not this time", or not at all. No one sees whether you opened an invitation.</p></div>
-    <div class="card"><p>Only families you connect with can see yours.</p></div>
-    <p class="soon">Coming soon to the App Store and Google Play.</p>
-    <footer><a href="privacy/">Privacy policy</a> · <a href="terms/">Terms of use</a> · © 2026 Prism Technology Consulting, LLC</footer>
+    <p class="lead" data-fr="Les rendez-vous de jeu en toute simplicité">Playdates made simple</p>
+    <div class="card"><p data-fr="Invitez les enfants des familles avec qui vous êtes connecté, choisissez un moment et un lieu, et voyez qui vient.">Invite children from families you're connected with, pick a time and place, and see who's coming.</p></div>
+    <div class="card"><p data-fr="Aucune pression : répondez « Oui » ou « Désolé, pas cette fois », ou ne répondez pas. Personne ne voit si vous avez ouvert une invitation.">No pressure: answer "Yes" or "Sorry, not this time", or not at all. No one sees whether you opened an invitation.</p></div>
+    <div class="card"><p data-fr="Seules les familles avec qui vous vous connectez peuvent voir la vôtre.">Only families you connect with can see yours.</p></div>
+    <p class="soon" data-fr="Bientôt sur l’App Store et Google Play.">Coming soon to the App Store and Google Play.</p>
+    <footer data-fr="&lt;a href=&quot;privacy/&quot;&gt;Politique de confidentialité (en anglais)&lt;/a&gt; · &lt;a href=&quot;terms/&quot;&gt;Conditions d’utilisation (en anglais)&lt;/a&gt; · © 2026 Prism Technology Consulting, LLC"><a href="privacy/">Privacy policy</a> · <a href="terms/">Terms of use</a> · © 2026 Prism Technology Consulting, LLC</footer>
   </main>
+  <script>
+    // French browsers get the French text kept in each data-fr attribute; everyone else keeps the English.
+    if (/^fr\b/i.test(navigator.language || '')) {
+      document.documentElement.lang = 'fr';
+      document.querySelectorAll('[data-fr]').forEach(function (el) { el.innerHTML = el.getAttribute('data-fr'); });
+    }
+  </script>
 </body>
 </html>
