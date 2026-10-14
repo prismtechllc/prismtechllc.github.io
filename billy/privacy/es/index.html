@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Política de privacidad de Billy</title>
+  <link rel="icon" href="../../icon.png">
+  <style>
+    :root { --bg: #fff; --surface: #f6f6f4; --text: #1d1d1f; --muted: #6e6e73; --accent: #2e5e9e; --border: #e3e3e0; }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #111213; --surface: #1b1c1e; --text: #f2f2f3; --muted: #9a9aa0; --accent: #9bb8e8; --border: #2c2d30; }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.6 -apple-system, system-ui, sans-serif; }
+    main { max-width: 680px; margin: 0 auto; padding: 40px 20px 64px; }
+    h1 { font-size: 28px; font-weight: 600; margin: 0 0 4px; letter-spacing: -0.3px; }
+    h2 { font-size: 18px; font-weight: 600; margin: 32px 0 8px; }
+    p, ul { margin: 0 0 12px; }
+    ul { padding-left: 20px; }
+    .brand { display: flex; align-items: center; gap: 14px; margin-bottom: 4px; }
+    .brand img { border-radius: 13px; flex: none; }
+    .brand h1 { margin: 0; text-wrap: balance; }
+    .updated { color: var(--muted); font-size: 14px; margin-bottom: 24px; }
+    a { color: var(--accent); }
+    table { width: 100%; border-collapse: collapse; margin: 0 0 12px; font-size: 15px; }
+    th, td { text-align: left; vertical-align: top; padding: 8px 10px; border-bottom: 1px solid var(--border); }
+    th { background: var(--surface); font-weight: 600; }
+    footer { margin-top: 40px; color: var(--muted); font-size: 14px; }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="brand"><img src="../../icon.png" alt="Ícono de Billy" width="56" height="56"><h1>Política de privacidad de Billy</h1></header>
+    <p class="updated">Última actualización: 14 de octubre de 2026 · <a href="../" lang="en">English version</a> · <a href="../fr/" lang="fr">Version française</a></p>
+    <p>Billy es desarrollada por Prism Technology Consulting, LLC, Michigan, EE.&nbsp;UU. («nosotros»). Billy ayuda a los grupos a compartir gastos en viajes, departamentos compartidos y salidas. Solo recopilamos lo que la app necesita, nunca lo vendemos y no mostramos anuncios.</p>
+    <h2>Qué recopilamos</h2>
+    <table><thead><tr><th>Datos</th><th>Para qué</th></tr></thead><tbody><tr><td>Correo electrónico (y, si inicias sesión con Apple o Google, el correo que nos comparten)</td><td>Iniciar sesión</td></tr><tr><td>El nombre que te pones y tu idioma</td><td>Mostrar quién eres en tus eventos y enviar los códigos de inicio de sesión en tu idioma</td></tr><tr><td>Eventos: su nombre y moneda, y los nombres de pila de las personas que participan</td><td>Compartir gastos con las personas del evento</td></tr><tr><td>Gastos y transferencias: descripción, monto, moneda, tipo de cambio, fecha, quién pagó, para quién, y las líneas de una cuenta escaneada</td><td>Calcular los saldos y quién le paga a quién</td></tr><tr><td>Dónde se registró un gasto, solo si activas el pin de ubicación (está desactivado salvo que lo cambies). La posición de tu teléfono en ese momento, redondeada a unos 10 metros</td><td>Mostrar los gastos del evento en un mapa</td></tr><tr><td>Los comentarios que envías desde la app, con el correo de respuesta que indiques, el correo de tu cuenta y la versión de la app</td><td>Responderte y mejorar la app. Nos llegan por correo y no se guardan en la base de datos de la app</td></tr></tbody></table>
+    <p><strong>Fotos de cuentas</strong>: cuando escaneas una cuenta, la foto se envía a Anthropic, cuyo modelo Claude lee los montos y las líneas. No guardamos la foto, y Anthropic no la usa para entrenar sus modelos.</p>
+    <p><strong>Contactos</strong>: Billy lee tus contactos en tu teléfono solo cuando tocas Agregar de contactos. Solo se guardan los nombres de pila que eliges, como personas del evento.</p>
+    <p><strong>Tipos de cambio</strong>: se consultan solo con códigos de moneda y una fecha. Tu moneda predeterminada y tus otras preferencias se quedan en tu teléfono.</p>
+    <p>No recopilamos identificadores publicitarios, no leemos tu ubicación en segundo plano y no te rastreamos entre apps.</p>
+    <h2>Quién puede ver tu información</h2>
+    <ul><li>Un evento, sus personas y sus gastos: solo quienes se unieron con su código o enlace de invitación. Cualquier persona del evento puede agregar, cambiar o eliminar sus gastos.</li><li>Comparte el código de un evento solo con personas de confianza.</li><li>No vendemos ni compartimos tu información con nadie con fines de marketing.</li></ul>
+    <p>Usamos estos proveedores para operar la app:</p>
+    <ul><li>Supabase (base de datos e inicio de sesión), alojado en Estados Unidos (Ohio)</li><li>Anthropic (lectura de cuentas escaneadas)</li><li>GitHub (almacenamiento de respaldos cifrados de la base de datos)</li><li>Expo (actualizaciones de la app)</li><li>Google Gmail (envío de códigos de inicio de sesión y comentarios)</li><li>Apple y Google (inicio de sesión, solo si los eliges, y tiendas de apps)</li><li>Frankfurter y ExchangeRate-API (tipos de cambio; solo reciben códigos de moneda y fechas)</li></ul>
+    <p>Podemos divulgar información si la ley lo exige.</p>
+    <h2>Cuánto tiempo la guardamos</h2>
+    <ul><li>Eventos que nadie ha modificado en un año: se eliminan con sus personas y gastos.</li><li>Inicios de sesión por correo nunca confirmados con su código: se eliminan después de 7 días.</li><li>Respaldos de la base de datos: cifrados, y solo se guardan los 7 más recientes, así que los datos eliminados desaparecen de los respaldos en 7 días.</li><li>Comentarios: se guardan en nuestro correo solo el tiempo necesario para atenderlos.</li><li>Tu cuenta: se guarda hasta que la eliminas en la app (Ayuda, Eliminar cuenta). Al eliminarla sales de todos tus eventos y luego se borran tu inicio de sesión y tu correo. Tu nombre de pila y los gastos de los eventos que otros siguen usando permanecen ahí, porque son el registro común del grupo; un evento se elimina cuando ya no queda nadie que se haya unido.</li></ul>
+    <h2>Menores</h2>
+    <p>Billy está pensada para adultos. No está dirigida a menores y no recopilamos sus datos a sabiendas.</p>
+    <h2>Seguridad</h2>
+    <p>Los datos se cifran en tránsito, y las reglas de la base de datos solo permiten ver un evento a sus participantes. Ningún sistema es perfectamente seguro.</p>
+    <h2>Tus derechos</h2>
+    <p>Puedes ver y cambiar tus datos en la app, exportar un evento (PDF, Excel o CSV) y eliminar tu cuenta en cualquier momento. Para cualquier otra cosa, como una copia de tus datos, usa Enviar comentarios en la app.</p>
+    <h2>Cambios y contacto</h2>
+    <p>Publicaremos los cambios aquí y actualizaremos la fecha de arriba; los cambios importantes se mostrarán en la app. Preguntas: usa Enviar comentarios en la app, en Ayuda.</p>
+    <footer><a href="../../terms/es/">Términos de uso</a> · © 2026 Prism Technology Consulting, LLC</footer>
+  </main>
+</body>
+</html>
