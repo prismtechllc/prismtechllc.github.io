@@ -1,61 +1,7 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Billy privacy policy</title>
-  <link rel="icon" href="../icon.png">
-  <style>
-    :root { --bg: #fff; --surface: #f6f6f4; --text: #1d1d1f; --muted: #6e6e73; --accent: #2e5e9e; --border: #e3e3e0; }
-    @media (prefers-color-scheme: dark) {
-      :root { --bg: #111213; --surface: #1b1c1e; --text: #f2f2f3; --muted: #9a9aa0; --accent: #9bb8e8; --border: #2c2d30; }
-    }
-    * { box-sizing: border-box; }
-    body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.6 -apple-system, system-ui, sans-serif; }
-    main { max-width: 680px; margin: 0 auto; padding: 40px 20px 64px; }
-    h1 { font-size: 28px; font-weight: 600; margin: 0 0 4px; letter-spacing: -0.3px; }
-    h2 { font-size: 18px; font-weight: 600; margin: 32px 0 8px; }
-    p, ul { margin: 0 0 12px; }
-    ul { padding-left: 20px; }
-    .brand { display: flex; align-items: center; gap: 14px; margin-bottom: 4px; }
-    .brand img { border-radius: 13px; flex: none; }
-    .brand h1 { margin: 0; text-wrap: balance; }
-    .updated { color: var(--muted); font-size: 14px; margin-bottom: 24px; }
-    a { color: var(--accent); }
-    table { width: 100%; border-collapse: collapse; margin: 0 0 12px; font-size: 15px; }
-    th, td { text-align: left; vertical-align: top; padding: 8px 10px; border-bottom: 1px solid var(--border); }
-    th { background: var(--surface); font-weight: 600; }
-    footer { margin-top: 40px; color: var(--muted); font-size: 14px; }
-  </style>
-</head>
-<body>
-  <main>
-    <header class="brand"><img src="../icon.png" alt="Billy icon" width="56" height="56"><h1>Billy privacy policy</h1></header>
-    <p class="updated">Last updated October 18, 2026 · <a href="fr/" lang="fr">Version française</a> · <a href="es/" lang="es">Versión en español</a></p>
-    <p>Billy is made by Prism Technology Consulting, LLC, Michigan, USA ("we"). Billy helps groups share costs on trips, at restaurant dinners and on nights out. We collect only what the app needs, never sell it, and show no ads.</p>
-    <h2>What we collect</h2>
-    <table><thead><tr><th>Data</th><th>Why</th></tr></thead><tbody><tr><td>Email address (and, if you sign in with Apple or Google, the email they share with us)</td><td>Sign in</td></tr><tr><td>The name you give yourself and your language</td><td>Show who you are in your occasions, and send sign-in codes in your language</td></tr><tr><td>Occasions: their name and currency, and the first names of the people in them</td><td>Share costs with the people in the occasion</td></tr><tr><td>Expenses and transfers: description, amount, currency, exchange rate, date, who paid, who it was for, and the lines of a scanned bill</td><td>Work out balances and who pays whom</td></tr><tr><td>Feedback you send in the app, with the reply email you give, your account email and the app version</td><td>Answer you and improve the app. It is emailed to us and not stored in the app's database</td></tr></tbody></table>
-    <p><strong>Bill photos</strong>: when you scan a bill, the photo is sent to Anthropic, whose Claude model reads the amounts and lines; Anthropic does not keep it or use it to train its models. A scanned photo is not stored. If you choose to attach a bill to an expense, a smaller copy of the photo is stored with that expense, visible to the people in its occasion, and deleted with the expense or its event.</p>
-    <p><strong>Voice entry</strong>: when you tap the microphone, your phone’s own speech recognition (Apple’s or Google’s, on the device when it can) turns what you say into text; we never receive the recording. The text is sent to Anthropic, whose Claude model fills in the expense from it; Anthropic does not keep it or use it to train its models, and it is not stored.</p>
-    <p><strong>Notifications</strong>: to tell you when a transaction is added, edited or deleted, we keep your phone’s push token with your account. Each notification goes through Expo’s push service and Apple or Google, and carries the occasion name, who made the change, its title and amount. You choose when you get them in Account (always, when your household is involved, when you are involved, or never); the token is deleted when you sign out, choose never, or your phone stops accepting notifications.</p>
-    <p><strong>Exchange rates</strong> are looked up with only currency codes and a date. Your default currency and other preferences stay on your phone.</p>
-    <p>We don't collect advertising IDs, we don't read your location in the background, and we don't track you across apps.</p>
-    <h2>Who can see your information</h2>
-    <ul><li>An occasion, its people and its expenses: only the people who joined that occasion with its invite code or link. Anyone in an occasion can add, change or delete its expenses.</li><li>Share an occasion's code only with people you trust.</li><li>We don't sell or share your information with anyone for marketing.</li></ul>
-    <p>We use these service providers to run the app:</p>
-    <ul><li>Supabase (database and sign-in), hosted in the United States (Ohio)</li><li>Anthropic (reading scanned bills and spoken expenses)</li><li>GitHub (storing encrypted database backups)</li><li>Expo (app updates)</li><li>Google Gmail (sending sign-in codes and feedback emails)</li><li>Apple and Google (sign-in, only if you choose them, and the app stores)</li><li>Frankfurter and ExchangeRate-API (exchange rates; they receive only currency codes and dates)</li></ul>
-    <p>We may disclose information if the law requires it.</p>
-    <h2>How long we keep it</h2>
-    <ul><li>Occasions nobody has changed for a year: deleted with their people and expenses.</li><li>Email sign-ins never confirmed with their code: deleted after 7 days.</li><li>Database backups: encrypted, and only the 7 most recent are kept, so deleted data is gone from backups within 7 days.</li><li>Feedback: kept in our email inbox only as long as needed to handle it.</li><li>Your account: kept until you delete it in the app (⋯, Account, Delete account). Deleting leaves all your occasions, then removes your sign-in and email. Your first name and the expenses in occasions that others still use stay there, because they are the group's shared record; an occasion is deleted once nobody who joined is left.</li></ul>
-    <h2>Children</h2>
-    <p>Billy is meant for adults. It is not directed at children, and we don't knowingly collect their data.</p>
-    <h2>Security</h2>
-    <p>Data is encrypted in transit, and database rules let only the people in an occasion see it. No system is perfectly secure.</p>
-    <h2>Your rights</h2>
-    <p>You can see and change your data in the app, export an occasion (PDF, Excel or CSV), and delete your account at any time. For anything else, such as a copy of your data, use Send feedback in the app.</p>
-    <h2>Changes and contact</h2>
-    <p>We'll post changes here and update the date above; significant changes will be shown in the app. Questions: use Send feedback in the app, under Help.</p>
-    <footer><a href="../terms/">Terms of use</a> · © 2026 Prism Technology Consulting, LLC</footer>
-  </main>
-</body>
-</html>
+<html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex">
+<title>Usawa</title>
+<link rel="canonical" href="https://www.prismtech.llc/usawa/privacy/">
+<meta http-equiv="refresh" content="0; url=/usawa/privacy/">
+<script>location.replace('/usawa/privacy/' + location.search + location.hash)</script>
+</head><body><p>Billy is now Usawa: <a href="/usawa/privacy/">www.prismtech.llc/usawa/privacy/</a></p></body></html>
