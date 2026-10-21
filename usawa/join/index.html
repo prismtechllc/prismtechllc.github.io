@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../icon.png">
+  <link rel="apple-touch-icon" href="../icon.png">
+  <meta property="og:image" content="https://www.prismtech.llc/usawa/icon-512.png">
+  <title>Join an occasion on Usawa</title>
+  <meta name="description" content="You’re invited to share costs on Usawa">
+  <meta property="og:title" content="Join an occasion on Usawa">
+  <meta property="og:description" content="You’re invited to share costs on Usawa">
+  <style>
+    :root { --bg: #fff; --surface: #f6f6f4; --text: #1d1d1f; --muted: #6e6e73; --accent: #2e5e9e; }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #111213; --surface: #1b1c1e; --text: #f2f2f3; --muted: #9a9aa0; --accent: #9bb8e8; }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.6 -apple-system, system-ui, sans-serif; }
+    main { max-width: 560px; margin: 0 auto; padding: 72px 20px 64px; }
+    h1 { font-size: 34px; font-weight: 600; margin: 0 0 8px; letter-spacing: -0.4px; }
+    .lead { color: var(--muted); font-size: 19px; margin: 0 0 32px; }
+    .card { background: var(--surface); border-radius: 14px; padding: 18px 20px; margin-bottom: 12px; }
+    .card p { margin: 0; }
+    .soon { margin-top: 32px; font-weight: 600; }
+    a { color: var(--accent); }
+    footer { margin-top: 48px; color: var(--muted); font-size: 14px; }
+    .code { font: 600 32px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: 2px; margin: 8px 0 24px; }
+    .button { display: inline-block; background: #2e5e9e; color: #fff; text-decoration: none; font-weight: 600; padding: 14px 24px; border-radius: 12px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1 data-fr="Rejoindre une occasion" data-es="Unirse a una ocasión">Join an occasion</h1>
+    <p class="lead" data-fr="Vous êtes invité à partager les dépenses sur Usawa. Votre code :" data-es="Te invitan a repartir gastos en Usawa. Tu código:">You’re invited to share costs on Usawa. Your code:</p>
+    <p class="code" id="code"></p>
+    <p><a class="button" id="open" href="usawa://join" data-fr="Ouvrir dans Usawa" data-es="Abrir en Usawa">Open in Usawa</a></p>
+    <p class="soon" data-es="Muy pronto en la App Store y Google Play. En la app, toca «Unirse con código»." data-fr="Bientôt sur l’App Store et Google Play. Dans l’app, touchez « Saisir un code ».">Coming soon to the App Store and Google Play. In the app, tap Join with a code.</p>
+    <footer data-es="&lt;a href=&quot;../&quot;&gt;Usawa&lt;/a&gt; · &lt;a href=&quot;../privacy/es/&quot;&gt;Política de privacidad&lt;/a&gt; · © 2026 Prism Technology Consulting, LLC" data-fr="&lt;a href=&quot;../&quot;&gt;Usawa&lt;/a&gt; · &lt;a href=&quot;../privacy/fr/&quot;&gt;Politique de confidentialité&lt;/a&gt; · © 2026 Prism Technology Consulting, LLC"><a href="../">Usawa</a> · <a href="../privacy/">Privacy policy</a> · © 2026 Prism Technology Consulting, LLC</footer>
+  </main>
+  <script>
+    // An invite link from the app: ?c=<code>, and ?app=<the app's own link> while testing in Expo Go.
+    var q = new URLSearchParams(location.search);
+    var code = (q.get('c') || '').toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 8);
+    var app = q.get('app') || '';
+    document.getElementById('code').textContent = code.length > 4 ? code.slice(0, 4) + '-' + code.slice(4) : code;
+    document.getElementById('open').href = /^(usawa:\/\/|exps?:\/\/u\.expo\.dev\/50f8585f-8727-478d-8391-595e9dd26c39\/)/.test(app) ? app : 'usawa://join/' + code;
+    // Browsers in a language the page has (a data-<language> attribute, like data-fr) get that text;
+    // everyone else keeps the English. To add a language, add its attribute to each element.
+    var lang = (navigator.language || '').slice(0, 2).toLowerCase();
+    if (/^[a-z]{2}$/.test(lang) && lang !== 'en' && document.querySelector('[data-' + lang + ']')) {
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-' + lang + ']').forEach(function (el) { el.innerHTML = el.getAttribute('data-' + lang); });
+    }
+  </script>
+</body>
+</html>
